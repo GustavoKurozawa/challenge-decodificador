@@ -47,6 +47,10 @@ Este projeto é uma aplicação web que permite criptografar e descriptografar t
 - CSS
 - JavaScript
 
+## Deploy
+
+A aplicação está disponível no seguinte link: [Criptografador de Textos - Deploy](https://projetos-oracle-one-qp8t.vercel.app/)
+
 ## Autor
 
 Desenvolvido por **Gustavo Kurozawa**.
