@@ -1,0 +1,225 @@
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f5fc;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; /* Limite de largura máxima para telas grandes */
+    height: 80%; /* Altura relativa à tela */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Seções Esquerda e Direita Iguais */
+.left-section,
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-section {
+    background-color: #f2f5fc;
+}
+
+.right-section {
+    background-color: white;
+    border-left: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Garante que o texto seja centralizado */
+    max-width: 100%; /* Garante que a seção não extrapole o limite */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Oculta a imagem em telas menores */
+.right-section img {
+    max-width: 100%;
+    height: auto;
+    width: 70%; /* Ajusta a largura da imagem */
+    margin-bottom: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+.right-section p {
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+    word-wrap: break-word; /* Quebra palavras longas */
+    white-space: normal; /* Permite quebra automática de linha */
+    overflow-wrap: break-word; /* Força a quebra de palavras se necessário */
+    max-width: 100%; /* Garante que o parágrafo não ultrapasse os limites da seção */
+    word-break: break-all; /* Força a quebra de palavras se necessário */
+}
+
+/* Estilos da Seção Esquerda */
+.left-section h1 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.left-section textarea {
+    width: 100%;
+    max-width: 500px; /* Limita o tamanho máximo da textarea */
+    height: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.left-section .info {
+    margin-top: 10px;
+    color: #8b8b8b;
+}
+
+.left-section .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Estilos dos Botões */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+
+.encrypt-btn {
+    background-color: #00337C;
+    color: white;
+}
+
+.decrypt-btn {
+    background-color: #f2f5fc;
+    border: 1px solid #00337C;
+    color: #00337C;
+}
+
+.copy-btn {
+    background-color: #00337C;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Estilo do Rodapé */
+footer {
+    background-color: #00337C;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    font-size: 16px;
+    position: fixed; /* Fixado no rodapé da página */
+    bottom: 0;
+    left: 0;
+}
+
+
+/* Responsividade */
+
+/* Telas Grandes (Computadores) */
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+
+    footer {
+        font-size: 16px;
+    }
+}
+
+/* Telas Médias (Tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        flex-direction: column;
+        height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%; /* Garante que ambas as seções ocupem 100% da largura */
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .right-section p {
+        font-size: 16px;
+    }
+
+    /* Oculta a imagem em telas de tablets */
+    .right-section img {
+        display: none;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px 0;
+    }
+}
+
+/* Telas Pequenas (Celulares) */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        height: auto; /* Ajusta a altura para telas menores */
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%; /* Garante que ambas as seções ocupem 100% da largura */
+    }
+
+    .left-section textarea {
+        height: 150px;
+    }
+
+    .right-section {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    /* Oculta a imagem em telas pequenas */
+    .right-section img {
+        display: none;
+    }
+
+    .right-section p {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px 0;
+    }
+}
